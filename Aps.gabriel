@@ -6,14 +6,6 @@ Nome: Gabriel Souza Oliveira da Silva
 Matricula: 2019100294
 */
 
-/*
-APS da Disciplina Programação em JavaScript
-Unicarioca
-Turma: 123N
-Nome: Gabriel Souza Oliveira da Silva
-Matricula: 2019100294
-*/
-
 // Definição da função fPrimo(numero):
 function fPrimo(numero){
 
