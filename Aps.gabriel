@@ -1,0 +1,46 @@
+/*
+APS da Disciplina Programação em JavaScript
+Unicarioca
+Turma: 123N
+Nome: Gabriel Souza Oliveira da Silva
+Matricula: 2019100294
+*/
+
+function fPrimo(numero){
+
+if (numero < 2) {
+return false;
+}
+else {
+for (let i = 2; i < numero; i++){
+if (numero % i === 0){
+return false;
+}
+}
+}
+return true;
+}
+
+let numero = parseInt(prompt("Digite o número"));
+if (fPrimo(numero)){
+   alert ("O número ["+ numero +"] É PRIMO!")
+}
+else{
+   alert ("O número ["+ numero +"] NÃO É PRIMO!")
+}
+
+function f10MaioresPrimos(numero){
+let contador = 0;
+for (let k = numero; k >= 2; k--){
+let ehPrimo = fPrimo(k);
+if (ehPrimo){
+console.log ("O número ["+ k +"] É PRIMO!")
+contador++;
+if (contador === 10){
+console.log ("Fim do programa!")
+break;
+}
+}
+}
+}
+f10MaioresPrimos(numero);
