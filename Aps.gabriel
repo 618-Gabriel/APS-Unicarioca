@@ -6,31 +6,40 @@ Nome: Gabriel Souza Oliveira da Silva
 Matricula: 2019100294
 */
 
+/*
+APS da Disciplina Programação em JavaScript
+Unicarioca
+Turma: 123N
+Nome: Gabriel Souza Oliveira da Silva
+Matricula: 2019100294
+*/
+
+// Definição da função fPrimo(numero):
 function fPrimo(numero){
 
 if (numero < 2) {
 return false;
 }
 else {
-for (let i = 2; i < numero; i++){
-if (numero % i === 0){
+for (let i = 2; i < numero; i++){ // Loop for para verificar divisibilidade do número
+if (numero % i === 0){ // Verifica se o número é divisível por algum número entre 2 e ele mesmo
 return false;
 }
 }
 }
-return true;
+return true; // Retorna verdadeiro se o número não for divisível por nenhum número diferente de 1 e ele mesmo
 }
 
-let numero = parseInt(prompt("Digite o número"));
-if (fPrimo(numero)){
+  let numero = parseInt(prompt("Digite o número"));
+  if (fPrimo(numero)){ // Verificação se o número é primo e exibição de um alerta:
    alert ("O número ["+ numero +"] É PRIMO!")
 }
 else{
    alert ("O número ["+ numero +"] NÃO É PRIMO!")
 }
 
-function f10MaioresPrimos(numero){
-let contador = 0;
+function f10MaioresPrimos(numero){ // Definição da função f10MaioresPrimos(numero):
+let contador = 0; // Inicializa um contador para contar o número de números primos encontrados
 for (let k = numero; k >= 2; k--){
 let ehPrimo = fPrimo(k);
 if (ehPrimo){
@@ -39,8 +48,9 @@ contador++;
 if (contador === 10){
 console.log ("Fim do programa!")
 break;
+
 }
 }
 }
 }
-f10MaioresPrimos(numero);
+f10MaioresPrimos(numero); // Chama a função f10MaioresPrimos(numero) para encontrar e exibir os 10 maiores números primos a partir do número fornecido
